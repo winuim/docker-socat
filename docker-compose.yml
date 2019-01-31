@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  socat:
+    image: socat:alpine
+    build: 
+      context: .
+    ports:
+      - 127.0.0.1:2375:2375
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    stdin_open: true
+    tty: true
