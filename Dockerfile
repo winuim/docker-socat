@@ -5,4 +5,4 @@ RUN set -x && apk update && apk add \
     && rm -rf /var/cache/apk/*
 
 ENTRYPOINT [ "socat" ]
-CMD [ "tcp-listen:2375,fork,reuseaddr", "unix-connect:/var/run/docker.sock" ]
+CMD [ "-v", "tcp-listen:2375,reuseaddr,fork", "unix-connect:/var/run/docker.sock" ]
