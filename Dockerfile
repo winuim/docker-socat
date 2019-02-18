@@ -1,5 +1,4 @@
 FROM alpine:latest
-LABEL Name=docker-socat Version=0.0.1
 
 RUN set -x && apk update && apk add \
     socat \

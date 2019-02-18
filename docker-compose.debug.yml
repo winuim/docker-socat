@@ -5,7 +5,6 @@ services:
     image: socat:alpine
     build: 
       context: .
-      dockerfile: Dockerfile
     ports:
       - 127.0.0.1:2375:2375
     volumes:
